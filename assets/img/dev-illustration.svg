@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 520" fill="none">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#18d26e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0abde3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5E3C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6B4226;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#18d26e;stop-opacity:0.08" />
+      <stop offset="100%" style="stop-color:#18d26e;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background glow -->
+  <ellipse cx="250" cy="300" rx="200" ry="200" fill="url(#bgGlow)"/>
+
+  <!-- Background code text -->
+  <g opacity="0.12" font-family="monospace" font-size="12" fill="#18d26e">
+    <text x="20" y="80">const dev = () =&gt; {</text>
+    <text x="30" y="98">  return magic;</text>
+    <text x="20" y="116">}</text>
+    <text x="345" y="65">flutter run</text>
+    <text x="355" y="448">git commit</text>
+    <text x="12" y="418">php artisan serve</text>
+  </g>
+
+  <!-- Laptop shadow -->
+  <ellipse cx="250" cy="348" rx="155" ry="8" fill="rgba(0,0,0,0.4)"/>
+
+  <!-- Laptop base -->
+  <rect x="100" y="330" width="300" height="12" rx="6" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+
+  <!-- Laptop body -->
+  <rect x="115" y="220" width="270" height="115" rx="10" fill="#111" stroke="#2a2a2a" stroke-width="1.5"/>
+  <rect x="120" y="225" width="260" height="105" rx="8" fill="#0a0a1a" stroke="rgba(24,210,110,0.3)" stroke-width="1"/>
+  <rect x="125" y="230" width="250" height="95" rx="6" fill="#0d1117"/>
+
+  <!-- Editor top bar -->
+  <rect x="125" y="230" width="250" height="16" rx="6" fill="#161b22"/>
+  <rect x="125" y="240" width="250" height="6" fill="#161b22"/>
+
+  <!-- Window dots -->
+  <circle cx="137" cy="238" r="3.5" fill="#ff5f57"/>
+  <circle cx="149" cy="238" r="3.5" fill="#febc2e"/>
+  <circle cx="161" cy="238" r="3.5" fill="#28c840"/>
+
+  <!-- File tab -->
+  <rect x="175" y="231" width="65" height="15" rx="4" fill="#1f2937" opacity="0.8"/>
+  <text x="180" y="242" font-family="monospace" font-size="7" fill="#18d26e">main.dart</text>
+
+  <!-- Code lines -->
+  <rect x="133" y="253" width="55" height="5" rx="2" fill="#ff7b72" opacity="0.8"/>
+  <rect x="195" y="253" width="35" height="5" rx="2" fill="#79c0ff" opacity="0.7"/>
+  <rect x="237" y="253" width="25" height="5" rx="2" fill="#a5d6ff" opacity="0.5"/>
+  <rect x="140" y="263" width="30" height="5" rx="2" fill="#7ee787" opacity="0.9"/>
+  <rect x="177" y="263" width="55" height="5" rx="2" fill="#e3b341" opacity="0.7"/>
+  <rect x="240" y="263" width="20" height="5" rx="2" fill="#a5d6ff" opacity="0.4"/>
+  <rect x="140" y="273" width="45" height="5" rx="2" fill="#79c0ff" opacity="0.7"/>
+  <rect x="192" y="273" width="30" height="5" rx="2" fill="#ff7b72" opacity="0.6"/>
+  <rect x="229" y="273" width="15" height="5" rx="2" fill="#7ee787" opacity="0.8"/>
+  <rect x="133" y="283" width="80" height="5" rx="2" fill="#a5d6ff" opacity="0.5"/>
+
+  <!-- Cursor blink -->
+  <rect x="220" y="282" width="2" height="7" rx="1" fill="#18d26e">
+    <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+
+  <rect x="140" y="293" width="60" height="5" rx="2" fill="#e3b341" opacity="0.5"/>
+  <rect x="207" y="293" width="45" height="5" rx="2" fill="#7ee787" opacity="0.4"/>
+  <rect x="133" y="305" width="35" height="5" rx="2" fill="#ff7b72" opacity="0.6"/>
+  <rect x="175" y="305" width="70" height="5" rx="2" fill="#79c0ff" opacity="0.5"/>
+
+  <!-- Keyboard -->
+  <rect x="115" y="335" width="270" height="5" rx="3" fill="#222"/>
+
+  <!-- Chair back -->
+  <rect x="215" y="170" width="70" height="120" rx="12" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Torso -->
+  <path d="M185 310 Q185 270 200 255 L220 248 L250 252 L280 248 L300 255 Q315 270 315 310 Z" fill="url(#shirtGrad)" stroke="#2a2a2a" stroke-width="1"/>
+  <path d="M220 248 L250 265 L280 248" stroke="url(#grad1)" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M215 270 L215 305" stroke="rgba(24,210,110,0.3)" stroke-width="1.5"/>
+  <path d="M285 270 L285 305" stroke="rgba(24,210,110,0.3)" stroke-width="1.5"/>
+
+  <!-- Left arm -->
+  <path d="M190 260 Q170 275 162 295 Q158 308 165 318 Q172 322 178 316 Q180 305 185 295 Q192 278 200 268 Z" fill="url(#skinGrad)"/>
+  <!-- Right arm -->
+  <path d="M310 260 Q330 275 338 295 Q342 308 335 318 Q328 322 322 316 Q320 305 315 295 Q308 278 300 268 Z" fill="url(#skinGrad)"/>
+
+  <!-- Left hand + fingers -->
+  <ellipse cx="168" cy="320" rx="14" ry="10" fill="url(#skinGrad)"/>
+  <rect x="156" y="314" width="6" height="10" rx="3" fill="#7a5230"/>
+  <rect x="163" y="312" width="6" height="12" rx="3" fill="#7a5230"/>
+  <rect x="170" y="312" width="6" height="12" rx="3" fill="#7a5230"/>
+  <rect x="177" y="314" width="5" height="10" rx="3" fill="#7a5230"/>
+
+  <!-- Right hand + fingers -->
+  <ellipse cx="332" cy="320" rx="14" ry="10" fill="url(#skinGrad)"/>
+  <rect x="321" y="314" width="5" height="10" rx="3" fill="#7a5230"/>
+  <rect x="327" y="312" width="6" height="12" rx="3" fill="#7a5230"/>
+  <rect x="334" y="312" width="6" height="12" rx="3" fill="#7a5230"/>
+  <rect x="341" y="314" width="6" height="10" rx="3" fill="#7a5230"/>
+
+  <!-- Neck -->
+  <rect x="237" y="195" width="26" height="30" rx="8" fill="url(#skinGrad)"/>
+
+  <!-- Head -->
+  <ellipse cx="250" cy="170" rx="48" ry="52" fill="url(#skinGrad)"/>
+  <ellipse cx="238" cy="148" rx="20" ry="15" fill="rgba(255,255,255,0.06)" transform="rotate(-15, 238, 148)"/>
+
+  <!-- Hair -->
+  <path d="M204 158 Q205 118 250 112 Q295 112 296 158 Q285 130 250 128 Q215 130 204 158 Z" fill="#1a0a00"/>
+  <path d="M204 155 Q204 130 220 120 Q215 142 212 158 Z" fill="#2a1000" opacity="0.5"/>
+  <path d="M296 155 Q296 130 280 120 Q285 142 288 158 Z" fill="#2a1000" opacity="0.5"/>
+
+  <!-- Ears -->
+  <ellipse cx="202" cy="172" rx="8" ry="10" fill="#7a5230"/>
+  <ellipse cx="298" cy="172" rx="8" ry="10" fill="#7a5230"/>
+
+  <!-- Eyes whites -->
+  <ellipse cx="234" cy="168" rx="9" ry="10" fill="white"/>
+  <ellipse cx="266" cy="168" rx="9" ry="10" fill="white"/>
+  <!-- Iris -->
+  <ellipse cx="236" cy="170" rx="6" ry="7" fill="#1a0a00"/>
+  <ellipse cx="268" cy="170" rx="6" ry="7" fill="#1a0a00"/>
+  <!-- Pupils -->
+  <ellipse cx="237" cy="171" rx="3" ry="3.5" fill="#000"/>
+  <ellipse cx="269" cy="171" rx="3" ry="3.5" fill="#000"/>
+  <!-- Eye shine -->
+  <ellipse cx="239" cy="168" rx="1.5" ry="1.5" fill="white"/>
+  <ellipse cx="271" cy="168" rx="1.5" ry="1.5" fill="white"/>
+
+  <!-- Eyebrows -->
+  <path d="M225 156 Q234 151 244 154" stroke="#1a0a00" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M256 154 Q266 151 275 156" stroke="#1a0a00" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Nose -->
+  <path d="M248 176 Q245 183 243 186 Q250 189 257 186 Q255 183 252 176 Z" fill="#6B4226" opacity="0.7"/>
+
+  <!-- Smile -->
+  <path d="M238 195 Q250 202 262 195" stroke="#5a3820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Headphones -->
+  <path d="M202 155 Q202 118 250 114 Q298 118 298 155" stroke="url(#grad1)" stroke-width="5" fill="none" stroke-linecap="round" filter="url(#glow)"/>
+  <rect x="195" y="153" width="14" height="22" rx="7" fill="#111" stroke="url(#grad1)" stroke-width="1.5"/>
+  <rect x="291" y="153" width="14" height="22" rx="7" fill="#111" stroke="url(#grad1)" stroke-width="1.5"/>
+
+  <!-- Floating tech badges -->
+
+  <!-- Flutter badge -->
+  <g filter="url(#softGlow)">
+    <rect x="28" y="148" width="78" height="30" rx="15" fill="rgba(10,189,227,0.12)" stroke="rgba(10,189,227,0.4)" stroke-width="1"/>
+    <text x="38" y="168" font-family="monospace" font-size="13" fill="#0abde3">Flutter</text>
+    <animate attributeName="opacity" values="0.85;0.5;0.85" dur="3s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Laravel badge -->
+  <g filter="url(#softGlow)">
+    <rect x="385" y="128" width="88" height="30" rx="15" fill="rgba(24,210,110,0.12)" stroke="rgba(24,210,110,0.4)" stroke-width="1"/>
+    <text x="395" y="148" font-family="monospace" font-size="13" fill="#18d26e">Laravel</text>
+    <animate attributeName="opacity" values="0.8;0.45;0.8" dur="4s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Dart badge -->
+  <g filter="url(#softGlow)">
+    <rect x="22" y="378" width="62" height="30" rx="15" fill="rgba(10,189,227,0.12)" stroke="rgba(10,189,227,0.35)" stroke-width="1"/>
+    <text x="33" y="398" font-family="monospace" font-size="13" fill="#0abde3">Dart</text>
+    <animate attributeName="opacity" values="0.75;0.4;0.75" dur="3.5s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- JS badge -->
+  <g filter="url(#softGlow)">
+    <rect x="400" y="368" width="42" height="30" rx="15" fill="rgba(24,210,110,0.12)" stroke="rgba(24,210,110,0.4)" stroke-width="1"/>
+    <text x="410" y="388" font-family="monospace" font-size="13" fill="#18d26e">JS</text>
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2.8s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Floating particles -->
+  <circle cx="80" cy="250" r="3" fill="#18d26e" opacity="0.4">
+    <animate attributeName="cy" values="250;230;250" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="420" cy="200" r="2" fill="#0abde3" opacity="0.5">
+    <animate attributeName="cy" values="200;180;200" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="60" cy="320" r="2.5" fill="#18d26e" opacity="0.35">
+    <animate attributeName="cy" values="320;300;320" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="440" cy="290" r="2" fill="#0abde3" opacity="0.4">
+    <animate attributeName="cy" values="290;270;290" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Bottom glow line -->
+  <rect x="80" y="350" width="340" height="2" rx="1" fill="url(#grad1)" opacity="0.3" filter="url(#glow)"/>
+</svg>
