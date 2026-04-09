@@ -19,17 +19,17 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-  --background-color: #000000;
-  /* Background color for the entire website, including individual sections */
-  --default-color: #fafafa;
+  --background-color: #0a0a12;
+  /* Background color — noir bleuté doux, moins agressif pour les yeux */
+  --default-color: #f0f0f5;
   /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ffffff;
   /* Color for headings, subheadings and title throughout the website */
   --accent-color: #18d26e;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #1a1a1a;
-  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #000000;
+  --surface-color: #141420;
+  /* Surface color — décalage bleuté subtil pour plus de profondeur */
+  --contrast-color: #0a0a12;
   /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 
   /* New modern design variables */
@@ -37,8 +37,8 @@
   --accent-color-secondary: #0abde3;
   --accent-glow: 0 0 20px rgba(24, 210, 110, 0.3);
   --accent-glow-strong: 0 0 40px rgba(24, 210, 110, 0.4), 0 0 80px rgba(10, 189, 227, 0.2);
-  --glass-bg: rgba(26, 26, 26, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(20, 20, 32, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.12);
   --glass-blur: blur(20px);
   --card-radius: 16px;
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -50,9 +50,9 @@
   /* The default color of the main navmenu links */
   --nav-hover-color: #18d26e;
   /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #1a1a1a;
+  --nav-mobile-background-color: #141420;
   /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #1a1a1a;
+  --nav-dropdown-background-color: #141420;
   /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #fafafa;
   /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -63,16 +63,16 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #1a1a1a;
-  --surface-color: #343434;
+  --background-color: #141420;
+  --surface-color: #1e1e2e;
 }
 
 .dark-background {
-  --background-color: rgba(15, 15, 15, 0.975);
+  --background-color: rgba(8, 8, 16, 0.975);
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #292929f9;
-  --contrast-color: #000000;
+  --surface-color: #1a1a2af9;
+  --contrast-color: #0a0a12;
 }
 
 /* Smooth scroll */
@@ -537,8 +537,8 @@ h6 {
 
 .footer .copyright {
   padding-top: 25px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  color: rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .footer .credits {
@@ -608,29 +608,42 @@ h6 {
   bottom: -15px;
   z-index: 99999;
   background: var(--accent-gradient);
-  width: 44px;
-  height: 44px;
-  border-radius: 50px;
-  transition: var(--transition-smooth);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   box-shadow: var(--accent-glow);
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .scroll-top i {
   font-size: 24px;
   color: #000000;
   line-height: 0;
+  transition: transform 0.3s ease;
 }
 
 .scroll-top:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px) scale(1.1);
   box-shadow: var(--accent-glow-strong);
   color: #000000;
+}
+
+.scroll-top:hover i {
+  transform: translateY(-2px);
 }
 
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
   bottom: 15px;
+  animation: scrollTopBounce 0.6s ease;
+}
+
+@keyframes scrollTopBounce {
+  0% { transform: translateY(20px); opacity: 0; }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); opacity: 1; }
 }
 
 /*--------------------------------------------------------------
@@ -2823,7 +2836,7 @@ section + section {
 
 .footer .footer-tagline {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.45);
   margin-top: 10px;
   font-style: normal;
 }
@@ -2874,4 +2887,71 @@ section + section {
   .process .process-steps {
     grid-template-columns: 1fr;
   }
+  .portfolio-stats {
+    gap: 20px !important;
+  }
+  .cta-recruiter {
+    padding: 30px 20px !important;
+  }
+}
+
+/*--------------------------------------------------------------
+# FAQ Accordion
+--------------------------------------------------------------*/
+.accordion-button::after {
+  filter: invert(1);
+}
+
+.accordion-button:not(.collapsed) {
+  background: rgba(24, 210, 110, 0.05) !important;
+  border-bottom: 1px solid rgba(24, 210, 110, 0.15);
+}
+
+.accordion-item {
+  transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+  border-color: rgba(24, 210, 110, 0.2) !important;
+}
+
+/*--------------------------------------------------------------
+# CTA Recruiter hover effects
+--------------------------------------------------------------*/
+.cta-recruiter a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(24, 210, 110, 0.4);
+}
+
+/*--------------------------------------------------------------
+# Partner cards hover + stagger animation
+--------------------------------------------------------------*/
+.partner-item {
+  animation: partnerFadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+.partner-item:nth-child(1) { animation-delay: 0.1s; }
+.partner-item:nth-child(2) { animation-delay: 0.25s; }
+.partner-item:nth-child(3) { animation-delay: 0.4s; }
+.partner-item:nth-child(4) { animation-delay: 0.55s; }
+
+@keyframes partnerFadeIn {
+  0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.partner-item:hover {
+  border-color: rgba(24, 210, 110, 0.25) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(24, 210, 110, 0.15);
+}
+
+/*--------------------------------------------------------------
+# Testimonial cards hover
+--------------------------------------------------------------*/
+.testimonial-card:hover {
+  border-color: rgba(24, 210, 110, 0.2) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
