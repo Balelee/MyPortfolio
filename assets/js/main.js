@@ -169,6 +169,29 @@
   });
 
   /**
+   * Scroll progress bar
+   */
+  const progressBar = document.createElement('div');
+  progressBar.className = 'scroll-progress';
+  progressBar.style.width = '0%';
+  document.body.prepend(progressBar);
+
+  function updateProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = progress + '%';
+  }
+
+  document.addEventListener('scroll', updateProgress);
+  window.addEventListener('load', updateProgress);
+
+  /**
+   * Page transition animation
+   */
+  document.body.classList.add('page-transition');
+
+  /**
    * Init isotope layout and filters
    */
   document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
