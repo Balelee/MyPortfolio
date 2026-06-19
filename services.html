@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -61,13 +61,14 @@
 
 <body class="services-page">
 
+  <a href="#main" class="skip-link">Aller au contenu</a>
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <img src="assets/img/logo_infinity.png" alt="">
+        <img src="assets/img/logo_infinity.png" alt="Logo Infinity Coder — Balélé Bienvenue BAZIE">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -79,13 +80,13 @@
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" role="button" tabindex="0" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="navmenu"></i>
       </nav>
 
     </div>
   </header>
 
-  <main class="main">
+  <main class="main" id="main">
 
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
@@ -131,7 +132,7 @@
               <div class="icon">
                 <i class="bi bi-phone"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="service-details.html" class="stretched-link">
                 <h3>Conception d'applications mobile</h3>
               </a>
               <p style="text-align: start;">En tant que développeur spécialisé en conception d'applications mobiles,
@@ -149,7 +150,7 @@
               <div class="icon">
                 <i class="bi bi-person"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="service-details.html" class="stretched-link">
                 <h3>Coaching en Informatique</h3>
               </a>
               <p style="text-align: start;">En tant que coach en informatique, j'accompagne les particuliers, les
@@ -168,7 +169,7 @@
               <div class="icon">
                 <i class="bi bi-easel"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="service-details.html" class="stretched-link">
                 <h3>Formation en Informatique</h3>
               </a>
               <p style="text-align: start;">En tant que formateur en informatique, je propose des formations complètes
@@ -185,7 +186,7 @@
               <div class="icon">
                 <i class="bi bi-bounding-box-circles"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="service-details.html" class="stretched-link">
                 <h3>Conception des sites web</h3>
               </a>
               <p style="text-align: start;">En tant que concepteur de sites web, je propose des solutions sur mesure
@@ -195,7 +196,6 @@
                 et adaptés aux besoins de chaque client. Mon approche est de concevoir des sites qui allient design
                 moderne, expérience
                 utilisateur (UX) optimale, et performances techniques.</p>
-              <a href="#" class="stretched-link"></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -204,7 +204,7 @@
               <div class="icon">
                 <i class="bi bi-calendar4-week"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="service-details.html" class="stretched-link">
                 <h3>Conception d'API</h3>
               </a>
               <p style="text-align: start;">En tant que développeur spécialisé en conception d'API, j’offre des services
@@ -215,7 +215,6 @@
                 données. Que ce soit pour une application web, mobile, ou un système complexe, mes API sont conçues pour
                 répondre aux
                 besoins spécifiques de votre projet tout en étant évolutives et faciles à maintenir.</p>
-              <a href="#" class="stretched-link"></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -224,7 +223,7 @@
               <div class="icon">
                 <i class="bi bi-laptop"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="service-details.html" class="stretched-link">
                 <h3>Maintenance et mise à jour de logiciels</h3>
               </a>
               <p style="text-align: start;">En tant que spécialiste en maintenance logicielle, j’offre des services
@@ -235,7 +234,6 @@
                 Mon objectif est d’assurer que vos solutions restent fiables, efficaces et évoluent avec les avancées
                 technologiques et
                 les nouvelles attentes de vos utilisateurs. </p>
-              <a href="#" class="stretched-link"></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -346,10 +344,10 @@
       <h3 class="sitename">Infinity Coder</h3>
       <p>Développeur Full-stack · Freelanceur · Formateur Informatique<br>Ouagadougou, Burkina Faso</p>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://github.com/bazieBienvenue" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/balele-bienvenue-bazie" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="https://wa.me/22654738460" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-        <a href="https://www.facebook.com/BAZIE.Balele.Bienvenue" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://github.com/bazieBienvenue" target="_blank" rel="noopener" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/balele-bienvenue-bazie" target="_blank" rel="noopener" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://wa.me/22654738460" target="_blank" rel="noopener" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.facebook.com/BAZIE.Balele.Bienvenue" target="_blank" rel="noopener" title="Facebook"><i class="bi bi-facebook"></i></a>
       </div>
       <div class="footer-links">
         <a href="index.html">Accueil</a>
@@ -391,7 +389,7 @@
   <script src="assets/js/main.js"></script>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/22654738460" class="whatsapp-float" target="_blank" title="Contactez-moi sur WhatsApp">
+  <a href="https://wa.me/22654738460" class="whatsapp-float" target="_blank" rel="noopener" title="Contactez-moi sur WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>
 

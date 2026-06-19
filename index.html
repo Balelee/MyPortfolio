@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -67,10 +67,11 @@
 
 <body class="index-page">
 
+  <a href="#main" class="skip-link">Aller au contenu</a>
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo_infinity.png" alt="" class="img-fluid col-6 col-sm-4 col-md-3 col-lg-2 w-60">
+      <a href="index.html" class="logo d-flex align-items-center" aria-label="Accueil — Infinity Coder">
+        <img src="assets/img/logo_infinity.png" alt="Logo Infinity Coder — Balélé Bienvenue BAZIE" class="img-fluid col-6 col-sm-4 col-md-3 col-lg-2 w-60">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -84,13 +85,13 @@
             <a href="contact.html">Contact</a>
           </li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" role="button" tabindex="0" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="navmenu"></i>
       </nav>
 
     </div>
   </header>
 
-  <main class="main">
+  <main class="main" id="main">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background container-fluid col-12 col-md-12">
@@ -112,7 +113,7 @@
           <!-- Colonne gauche : texte -->
           <div class="col-xl-6 col-lg-6 col-12">
             <div class="availability-badge"><span class="pulse-dot"></span> Disponible pour freelance</div>
-            <h2>Balélé Bienvenue</h2>
+            <h1>Balélé Bienvenue</h1>
             <p>Je suis <span class="typed"
                 data-typed-items="Développeur Full-stack, Freelanceur, Formateur Informatique">Développeur</span><span
                 class="typed-cursor typed-cursor--blink"></span></p><br>
@@ -130,16 +131,16 @@
 
             <!-- Social Links -->
             <div class="hero-social" data-aos="fade-up" data-aos-delay="400">
-              <a href="https://github.com/bazieBienvenue" target="_blank" class="github">
+              <a href="https://github.com/bazieBienvenue" target="_blank" rel="noopener" class="github">
                 <i class="bi bi-github"></i><span>GitHub</span>
               </a>
-              <a href="https://www.linkedin.com/in/balele-bienvenue-bazie" target="_blank" class="linkedin">
+              <a href="https://www.linkedin.com/in/balele-bienvenue-bazie" target="_blank" rel="noopener" class="linkedin">
                 <i class="bi bi-linkedin"></i><span>LinkedIn</span>
               </a>
-              <a href="https://wa.me/22654738460" target="_blank" class="whatsapp">
+              <a href="https://wa.me/22654738460" target="_blank" rel="noopener" class="whatsapp">
                 <i class="bi bi-whatsapp"></i><span>WhatsApp</span>
               </a>
-              <a href="https://www.facebook.com/BAZIE.Balele.Bienvenue" target="_blank" class="facebook">
+              <a href="https://www.facebook.com/BAZIE.Balele.Bienvenue" target="_blank" rel="noopener" class="facebook">
                 <i class="bi bi-facebook"></i><span>Facebook</span>
               </a>
             </div>
@@ -190,7 +191,7 @@
             <div class="icon">
               <i class="bi bi-phone"></i>
             </div>
-            <a href="#" class="stretched-link">
+            <a href="services.html" class="stretched-link">
               <h3>Conception d'applications mobile</h3>
             </a>
             <p style="text-align: start;">En tant que développeur spécialisé en conception d'applications mobiles,
@@ -208,7 +209,7 @@
             <div class="icon">
               <i class="bi bi-person"></i>
             </div>
-            <a href="#" class="stretched-link">
+            <a href="services.html" class="stretched-link">
               <h3>Coaching en Informatique</h3>
             </a>
             <p style="text-align: start;">En tant que coach en informatique, j'accompagne les particuliers, les
@@ -227,7 +228,7 @@
             <div class="icon">
               <i class="bi bi-easel"></i>
             </div>
-            <a href="#" class="stretched-link">
+            <a href="services.html" class="stretched-link">
               <h3>Formation en Informatique</h3>
             </a>
             <p style="text-align: start;">En tant que formateur en informatique, je propose des formations complètes
@@ -243,7 +244,7 @@
             <div class="icon">
               <i class="bi bi-bounding-box-circles"></i>
             </div>
-            <a href="#" class="stretched-link">
+            <a href="services.html" class="stretched-link">
               <h3>Conception des sites web</h3>
             </a>
             <p style="text-align: start;">En tant que concepteur de sites web, je propose des solutions sur mesure pour
@@ -252,7 +253,6 @@
               et adaptés aux besoins de chaque client. Mon approche est de concevoir des sites qui allient design
               moderne, expérience
               utilisateur (UX) optimale, et performances techniques.</p>
-            <a href="#" class="stretched-link"></a>
           </div>
         </div><!-- End Service Item -->
 
@@ -261,7 +261,7 @@
             <div class="icon">
               <i class="bi bi-calendar4-week"></i>
             </div>
-            <a href="#" class="stretched-link">
+            <a href="services.html" class="stretched-link">
               <h3>Conception d'API</h3>
             </a>
             <p style="text-align: start;">En tant que développeur spécialisé en conception d'API, j’offre des services
@@ -272,7 +272,6 @@
               données. Que ce soit pour une application web, mobile, ou un système complexe, mes API sont conçues pour
               répondre aux
               besoins spécifiques de votre projet tout en étant évolutives et faciles à maintenir.</p>
-            <a href="#" class="stretched-link"></a>
           </div>
         </div><!-- End Service Item -->
 
@@ -281,7 +280,7 @@
             <div class="icon">
               <i class="bi bi-laptop"></i>
             </div>
-            <a href="#" class="stretched-link">
+            <a href="services.html" class="stretched-link">
               <h3>Maintenance et mise à jour de logiciels</h3>
             </a>
             <p style="text-align: start;">En tant que spécialiste en maintenance logicielle, j’offre des services
@@ -292,7 +291,6 @@
               Mon objectif est d’assurer que vos solutions restent fiables, efficaces et évoluent avec les avancées
               technologiques et
               les nouvelles attentes de vos utilisateurs. </p>
-            <a href="#" class="stretched-link"></a>
           </div>
         </div><!-- End Service Item -->
       </div>
@@ -545,7 +543,7 @@
                       <span>MySQL</span>
                     </div>
                     <div style="margin-top: 14px;">
-                      <a href="https://slimatgroup.cloud/" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 20px; background: linear-gradient(135deg, #18d26e, #0abde3); color: #000; border-radius: 50px; font-weight: 600; font-size: 13px; text-decoration: none; box-shadow: 0 4px 15px rgba(24,210,110,0.3);">
+                      <a href="https://slimatgroup.cloud/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 20px; background: linear-gradient(135deg, #18d26e, #0abde3); color: #000; border-radius: 50px; font-weight: 600; font-size: 13px; text-decoration: none; box-shadow: 0 4px 15px rgba(24,210,110,0.3);">
                         <i class="bi bi-globe2"></i> Démo en ligne
                       </a>
                     </div>
@@ -602,7 +600,7 @@
                       <span>Mobile Money</span>
                     </div>
                     <div style="margin-top: 14px;">
-                      <a href="https://play.google.com/store/search?q=gandyam+pay&c=apps&hl=fr" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 20px; background: linear-gradient(135deg, #18d26e, #0abde3); color: #000; border-radius: 50px; font-weight: 600; font-size: 13px; text-decoration: none; box-shadow: 0 4px 15px rgba(24,210,110,0.3);">
+                      <a href="https://play.google.com/store/search?q=gandyam+pay&c=apps&hl=fr" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 20px; background: linear-gradient(135deg, #18d26e, #0abde3); color: #000; border-radius: 50px; font-weight: 600; font-size: 13px; text-decoration: none; box-shadow: 0 4px 15px rgba(24,210,110,0.3);">
                         <i class="bi bi-google-play"></i> Google Play
                       </a>
                     </div>
@@ -643,8 +641,6 @@
             </div>
           </div>
 
-        </div>
-
           <!-- Mawadda -->
           <div class="col-12" data-aos="fade-up" data-aos-delay="300">
             <div class="project-card project-card-featured">
@@ -666,7 +662,7 @@
                       <span>Firebase Auth</span>
                     </div>
                     <div style="margin-top: 14px;">
-                      <a href="https://play.google.com/store/search?q=mawadda&c=apps&hl=fr" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 20px; background: linear-gradient(135deg, #18d26e, #0abde3); color: #000; border-radius: 50px; font-weight: 600; font-size: 13px; text-decoration: none; box-shadow: 0 4px 15px rgba(24,210,110,0.3);">
+                      <a href="https://play.google.com/store/search?q=mawadda&c=apps&hl=fr" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 20px; background: linear-gradient(135deg, #18d26e, #0abde3); color: #000; border-radius: 50px; font-weight: 600; font-size: 13px; text-decoration: none; box-shadow: 0 4px 15px rgba(24,210,110,0.3);">
                         <i class="bi bi-google-play"></i> Google Play
                       </a>
                     </div>
@@ -849,10 +845,10 @@
       <h3 class="sitename">Infinity Coder</h3>
       <p>Développeur Full-stack · Freelanceur · Formateur Informatique<br>Ouagadougou, Burkina Faso</p>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://github.com/bazieBienvenue" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/balele-bienvenue-bazie" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="https://wa.me/22654738460" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-        <a href="https://www.facebook.com/BAZIE.Balele.Bienvenue" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://github.com/bazieBienvenue" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/balele-bienvenue-bazie" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://wa.me/22654738460" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.facebook.com/BAZIE.Balele.Bienvenue" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
       </div>
       <div class="footer-links">
         <a href="index.html">Accueil</a>
@@ -903,7 +899,7 @@
   </script>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/22654738460" class="whatsapp-float" target="_blank" title="Contactez-moi sur WhatsApp">
+  <a href="https://wa.me/22654738460" class="whatsapp-float" target="_blank" rel="noopener" title="Contactez-moi sur WhatsApp" aria-label="Contactez-moi sur WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>
 

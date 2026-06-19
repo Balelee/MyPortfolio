@@ -28,24 +28,49 @@
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
   function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
+    const isActive = document.querySelector('body').classList.toggle('mobile-nav-active');
     mobileNavToggleBtn.classList.toggle('bi-list');
     mobileNavToggleBtn.classList.toggle('bi-x');
+    mobileNavToggleBtn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+    mobileNavToggleBtn.setAttribute('aria-label', isActive ? 'Fermer le menu de navigation' : 'Ouvrir le menu de navigation');
   }
+
+  function closeMobileNav() {
+    if (document.body.classList.contains('mobile-nav-active')) {
+      mobileNavToogle();
+    }
+  }
+
   if (mobileNavToggleBtn) {
     mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+    // Activation clavier (l'élément est un <i role="button">)
+    mobileNavToggleBtn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        mobileNavToogle();
+      }
+    });
   }
+
+  // Fermer avec la touche Échap
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMobileNav();
+  });
+
+  // Fermer en cliquant en dehors du menu
+  document.addEventListener('click', (e) => {
+    if (document.body.classList.contains('mobile-nav-active') &&
+        !e.target.closest('#navmenu') &&
+        !e.target.closest('.mobile-nav-toggle')) {
+      closeMobileNav();
+    }
+  });
 
   /**
    * Hide mobile nav on same-page/hash links
    */
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
-      }
-    });
-
+    navmenu.addEventListener('click', closeMobileNav);
   });
 
   /**
@@ -95,11 +120,13 @@
    * Animation on scroll function and init
    */
   function aosInit() {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     AOS.init({
       duration: 600,
       easing: 'ease-in-out',
       once: true,
-      mirror: false
+      mirror: false,
+      disable: prefersReducedMotion
     });
   }
   window.addEventListener('load', aosInit);

@@ -937,6 +937,7 @@ section,
   z-index: 3;
 }
 
+.hero h1,
 .hero h2 {
   margin: 0;
   font-size: 72px;
@@ -990,6 +991,7 @@ section,
 }
 
 @media (max-width: 768px) {
+  .hero h1,
   .hero h2 {
     font-size: 38px;
   }
@@ -2976,6 +2978,7 @@ section + section {
 # Responsive improvements
 --------------------------------------------------------------*/
 @media (max-width: 576px) {
+  .hero h1,
   .hero h2 {
     font-size: 32px;
   }
@@ -3155,4 +3158,106 @@ section + section {
 @keyframes pageIn {
   0% { opacity: 0; transform: translateY(15px); }
   100% { opacity: 1; transform: translateY(0); }
+}
+
+/*--------------------------------------------------------------
+# Accessibilité — Focus clavier visible
+--------------------------------------------------------------*/
+a:focus-visible,
+button:focus-visible,
+.cta-btn:focus-visible,
+.view-all-btn:focus-visible,
+.navmenu a:focus-visible,
+.mobile-nav-toggle:focus-visible,
+.scroll-top:focus-visible,
+.whatsapp-float:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Lien d'évitement clavier — masqué jusqu'au focus */
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 1000000;
+  background: var(--accent-color);
+  color: #000;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: top 0.25s ease;
+}
+
+.skip-link:focus {
+  top: 12px;
+  color: #000;
+}
+
+/*--------------------------------------------------------------
+# Micro-interactions
+--------------------------------------------------------------*/
+.partner-item,
+.testimonial-card,
+.tech-badge,
+.view-all-btn {
+  transition: var(--transition-smooth);
+}
+
+.partner-item:hover {
+  transform: translateY(-6px);
+  border-color: rgba(24, 210, 110, 0.35) !important;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3), 0 0 24px rgba(24, 210, 110, 0.1);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(24, 210, 110, 0.3) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+.tech-badge:hover {
+  transform: translateY(-3px);
+  border-color: rgba(24, 210, 110, 0.4);
+  box-shadow: var(--accent-glow);
+}
+
+/* Boutons Google Play / démo — léger lift au survol */
+.project-body a[href]:not(.stretched-link):hover,
+.featured-project-details a[href^="http"]:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.project-body a[href]:not(.stretched-link),
+.featured-project-details a[href^="http"] {
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+/* Retour tactile au clic */
+.cta-btn:active,
+.view-all-btn:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+/*--------------------------------------------------------------
+# Respect de prefers-reduced-motion
+--------------------------------------------------------------*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-particles,
+  .scroll-progress {
+    display: none !important;
+  }
 }
