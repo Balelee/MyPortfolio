@@ -3261,3 +3261,32 @@ button:focus-visible,
     display: none !important;
   }
 }
+
+/*--------------------------------------------------------------
+# Bouton projet réutilisable (app store / démo)
+--------------------------------------------------------------*/
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: var(--accent-gradient);
+  color: #000;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(24, 210, 110, 0.3);
+  transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-link-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  color: #000;
+  box-shadow: 0 6px 22px rgba(24, 210, 110, 0.4);
+}
+
+.project-link-btn i {
+  font-size: 1.05em;
+}
